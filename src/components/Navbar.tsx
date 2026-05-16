@@ -17,17 +17,18 @@ export function NavbarContent({
 }: NavbarProps) {
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location.pathname);
     
     return (
         <AppBar
             position="fixed"
             elevation={6}
             sx={{
-                top: "5%",
+                top: "2vh",
                 left: "50%",
                 transform: "translateX(-50%)",
-                width: "80%",
+                minWidth: "600px",
+                width: "80vw",
+                maxWidth: "1100px",
                 borderRadius: "999px",
                 backgroundColor: "background.paper",
                 color: "text.primary",
