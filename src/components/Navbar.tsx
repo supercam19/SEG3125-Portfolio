@@ -34,9 +34,7 @@ export function NavbarContent({
                 color: "text.primary",
                 px: 3,
                 py: 0.75,
-                boxShadow: darkMode
-                    ? "0 8px 32px rgba(0,0,0,0.6)"
-                    : "0 8px 32px rgba(0,0,0,0.12)",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
             }}
         >
             <Box
