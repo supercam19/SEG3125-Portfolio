@@ -14,7 +14,7 @@ interface NavbarProps {
 export function NavbarContent({ 
   darkMode, 
   setDarkMode,
-}: NavbarProps) {
+}: Readonly<NavbarProps>) {
     const navigate = useNavigate();
     const location = useLocation();
     

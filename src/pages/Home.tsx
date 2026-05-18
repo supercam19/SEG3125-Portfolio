@@ -1,7 +1,29 @@
 ﻿import {Box, Stack, Typography, useTheme} from "@mui/material";
+import type {Project} from "../utils/types.ts";
+import {ProjectSummary} from "../components/ProjectSummary.tsx";
 
 export function Home() {
     const theme = useTheme();
+    
+    const projects: Project[] = [
+        {
+            title: "Service Site",
+            thumbnail: "/service_site.jpg"
+        },
+        {
+            title: "Memory Game",
+            thumbnail: "/memory_game.jpg"
+        },
+        {
+            title: "E-commerce Site",
+            thumbnail: "/ecommerce_site.jpg"
+        },
+        {
+            title: "Analytics Site",
+            thumbnail: "/analytics_site.jpg"
+        },
+    ]
+    
     return (
         <Box sx={{
             color: "text.primary",
@@ -51,7 +73,15 @@ export function Home() {
                     </Typography>
                 </Stack>
             </Box>
-            <Box sx={{ position: "relative", marginTop: "-80px", zIndex: 2 }}>
+            <Box sx={{ 
+                position: "relative", 
+                marginTop: "-80px", 
+                zIndex: 2,
+                background: "background.paper",
+                lineHeight: 0,
+                transform: "translateZ(0)",
+                willChange: "transform",
+            }}>
                 <svg
                     viewBox="0 0 1440 80"
                     xmlns="http://www.w3.org/2000/svg"
@@ -69,11 +99,25 @@ export function Home() {
                     />
                 </svg>
             </Box>
-            <Box sx={{ bgcolor: "background.paper", minHeight: "100vh", minWidth: "100%", zIndex: 10, position: "relative" }}>
-                <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                </Typography>
+            
+            <Box sx={{ 
+                bgcolor: "background.paper", 
+                minWidth: "100%", 
+                minHeight: "100%",
+                zIndex: 10, 
+                position: "relative",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "-2px",
+            }}>
+                <Typography component="h4" variant="h4" sx={{marginLeft: "15vw", textAlign: "left", marginBottom: 2}}>My Projects</Typography>
+                <Box sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                }}>
+                    {projects.map((p) => <ProjectSummary project={p} />)}
+                </Box>
             </Box>
         </Box>
     );
