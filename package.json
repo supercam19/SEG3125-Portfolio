@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://supercam19.github.io/seg3125-portfolio/home",
+  "homepage": "https://supercam19.github.io/SEG3125-Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
