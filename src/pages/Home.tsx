@@ -38,6 +38,7 @@ export function Home() {
                 display: "flex",
                 textAlign: "left",
                 position: "relative",
+                paddingY: "32px",
                 "::before": {
                     content: '""',
                     position: "absolute",

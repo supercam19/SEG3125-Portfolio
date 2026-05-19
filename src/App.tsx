@@ -63,8 +63,9 @@ export default function App() {
   const darkTheme = createTheme({
     palette: darkPalette,
   });
-  
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [darkMode, setDarkMode] = useState<boolean>(isDarkMode);
   
   return (
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
