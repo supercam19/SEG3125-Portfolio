@@ -61,7 +61,7 @@ export function NavbarContent({
                         gap: 3,
                     }}
                 >
-                    {["Home", "Projects", "Contact"].map((label) => (
+                    {["Home", "Projects"].map((label) => (
                         <Typography
                             key={label}
                             variant="body1"

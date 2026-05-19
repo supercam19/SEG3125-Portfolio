@@ -11,7 +11,7 @@ export default function App() {
   const lightPalette: PaletteOptions = {
     mode: "light",
     primary: {
-      main: "#1976d2",
+      main: "#ba170b",
       light: "#42a5f5",
       dark: "#1565c0",
       contrastText: "#ffffff",
@@ -35,7 +35,7 @@ export default function App() {
   const darkPalette: PaletteOptions = {
     mode: "dark",
     primary: {
-      main: "#90caf9",
+      main: "#ba170b",
       light: "#e3f2fd",
       dark: "#42a5f5",
       contrastText: "#000000",
