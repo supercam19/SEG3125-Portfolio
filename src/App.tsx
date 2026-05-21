@@ -58,10 +58,16 @@ export default function App() {
 
   const lightTheme = createTheme({
     palette: lightPalette,
+    typography: {
+      fontFamily: "Cambria"
+    }
   });
 
   const darkTheme = createTheme({
     palette: darkPalette,
+    typography: {
+      fontFamily: "Cambria",
+    }
   });
 
   const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
