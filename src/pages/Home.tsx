@@ -113,8 +113,9 @@ export function Home() {
             }}>
                 <Typography component="h4" variant="h4" sx={{marginLeft: "15vw", textAlign: "left", marginBottom: 2}}>My Projects</Typography>
                 <Box sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(2, 400px)',
+                    gap: '20px',
                     justifyContent: "center",
                 }}>
                     {projects.map((p) => <ProjectSummary project={p} />)}

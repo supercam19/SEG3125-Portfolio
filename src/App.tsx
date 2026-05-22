@@ -1,6 +1,6 @@
 import {createTheme, type PaletteOptions, ThemeProvider} from "@mui/material";
 import {NavbarContent} from "./components/Navbar.tsx";
-import React, {useState} from "react";
+import {useState} from "react";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import {Home} from "./pages/Home.tsx";
 import {Projects} from "./pages/Projects.tsx";
