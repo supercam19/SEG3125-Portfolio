@@ -7,8 +7,10 @@ export function Home() {
     
     const projects: Project[] = [
         {
-            title: "Service Site",
-            thumbnail: "/service_site.jpg"
+            title: "Cedarvale Veterinary Hospital",
+            thumbnail: "/service_site.jpg",
+            description: "A service website for a local veterinary hospital.",
+            link: "https://cedarvale-vet.netlify.app/"
         },
         {
             title: "Memory Game",
