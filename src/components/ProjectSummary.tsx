@@ -1,6 +1,5 @@
 ﻿import {Box, Stack, Typography} from "@mui/material";
 import type {Project} from "../utils/types.ts";
-import {useNavigate} from "react-router-dom";
 
 interface Props {
     project: Project;
@@ -8,10 +7,9 @@ interface Props {
 
 export function ProjectSummary({project}: Readonly<Props>) {
     const placeholder = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus."
-    const navigate = useNavigate();
     const BORDER_RADIUS = 15;
     return (
-        <Stack direction="column" onClick={() => navigate(project.link ?? "/projects")} sx={{
+        <Stack direction="column" onClick={() => window.open(project.link ?? "/projects")} sx={{
             width: 400,
             height: 450,
             bgcolor: "background.paper",
