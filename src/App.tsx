@@ -1,7 +1,7 @@
 import {createTheme, type PaletteOptions, ThemeProvider} from "@mui/material";
 import {NavbarContent} from "./components/Navbar.tsx";
 import {useState} from "react";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import {Home} from "./pages/Home.tsx";
 import {Projects} from "./pages/Projects.tsx";
 import {Contact} from "./pages/Contact.tsx";
@@ -58,18 +58,26 @@ export default function App() {
 
   const lightTheme = createTheme({
     palette: lightPalette,
+    typography: {
+      fontFamily: "Cambria"
+    }
   });
 
   const darkTheme = createTheme({
     palette: darkPalette,
+    typography: {
+      fontFamily: "Cambria",
+    }
   });
-  
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [darkMode, setDarkMode] = useState<boolean>(isDarkMode);
   
   return (
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <BrowserRouter>
           <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
