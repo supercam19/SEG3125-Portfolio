@@ -13,8 +13,10 @@ export function Home() {
             link: "https://cedarvale-vet.netlify.app/"
         },
         {
-            title: "Memory Game",
-            thumbnail: "/memory_game.jpg"
+            title: "Memory Mania",
+            thumbnail: "/memory_game.jpg",
+            description: "A web based card-matching memory game.",
+            link: "https://memory-mania-game.netlify.app/"
         },
         {
             title: "E-commerce Site",
