@@ -19,8 +19,10 @@ export function Home() {
             link: "https://memory-mania-game.netlify.app/"
         },
         {
-            title: "E-commerce Site",
-            thumbnail: "/ecommerce_site.jpg"
+            title: "Atlas Sports Equipment",
+            thumbnail: "/ecommerce_site.jpg",
+            description: "An E-commerce site selling high quality skiing and snowboarding equipment.",
+            link: "https://atlas-sports-equipment.netlify.app/"
         },
         {
             title: "Analytics Site",
