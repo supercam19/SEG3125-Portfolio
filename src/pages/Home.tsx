@@ -25,8 +25,10 @@ export function Home() {
             link: "https://atlas-sports-equipment.netlify.app/"
         },
         {
-            title: "Analytics Site",
-            thumbnail: "/analytics_site.jpg"
+            title: "Galileo Entry",
+            thumbnail: "/analytics_site.jpg",
+            description: "A dashboard that displays entry and descent data for the Galileo Probe into Jupiter. Visualizes probe's data in an accessible way for readers.",
+            link: "https://galileo-entry.netlify.app/"
         },
     ]
     
